@@ -728,6 +728,7 @@ html[dir="rtl"] .add-to .dropdown-content {
   }
   .section-head h2 {
     font-size: 18px;
+    text-align: center;
   }
   .category-cont .span {
     font-size: 14px;
