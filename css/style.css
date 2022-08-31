@@ -28,7 +28,7 @@ img {
 /* width */
 ::-webkit-scrollbar {
   width: 6px;
-  height: 6px;
+  height: 3px;
 }
 
 /* Track */
@@ -38,7 +38,7 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--sec-color);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* Handle on hover */
@@ -86,16 +86,16 @@ a {
   color: rgba(255, 255, 255, 100);
   background-image: linear-gradient(
     135deg,
-    var(--main-color),
-    var(--main-hover)
+    var(--main-hover),
+    var(--sec-color)
   );
   /* border-radius: 4px 4px 4px 4px; */
 }
 html[dir="ltr"] .progress-bar {
   background-image: linear-gradient(
     135deg,
-    var(--main-hover),
-    var(--main-color)
+    var(--sec-color),
+    var(--main-hover)
   );
 }
 @keyframes progress {
@@ -1151,12 +1151,12 @@ html[dir="rtl"] .add-to .dropdown-content {
   background-color: #11b8f5;
   color: var(--white-color);
 }
-.product-section .btn-cont {
+.btn-cont {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.product-section .add-to-fav {
+.add-to-fav {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1169,7 +1169,7 @@ html[dir="rtl"] .add-to .dropdown-content {
   font-size: 24px;
   transition: all 0.3s ease-in-out;
 }
-.product-section .add-to-fav:hover {
+.add-to-fav:hover {
   background-color: #ff0000;
   color: var(--white-color);
 }
@@ -1255,8 +1255,8 @@ html[dir="rtl"] .add-to .dropdown-content {
 }
 
 .product-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background-color: rgb(18, 17, 18);
   opacity: 0.3;
   margin: 0 3px;
@@ -1279,7 +1279,8 @@ html[dir="rtl"] .add-to .dropdown-content {
 @media (max-width: 767px) {
   .product-section .product-title {
     flex-direction: column;
-    padding-bottom: 20px;
+    align-items: flex-start;
+    padding-bottom: 0px;
     margin-bottom: 20px;
   }
   .product-flex {
@@ -1344,8 +1345,8 @@ html[dir="rtl"] .add-to .dropdown-content {
   .product-hover .hint {
     font-size: 10px;
   }
-  .nav-tabs > li > a{
-    padding: 10px 8px;
+  .nav-tabs > li > a {
+    padding: 8px 8px;
   }
 }
 /*                             product section                          */
@@ -1724,7 +1725,7 @@ html[dir="ltr"] .features-box .features-span {
   height: 6px;
   background-color: rgb(18, 17, 18);
   opacity: 0.5;
-  margin: 0 5px;
+  margin: 0 3px;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
