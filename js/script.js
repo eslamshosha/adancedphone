@@ -94,37 +94,36 @@ $(document).ready(function () {
     },
   });
   ////////////////add swiper carsoul to class category////////////////////////////////
-  if ($(window).width() < 991) {
-    $(".category-section .swiper-containeres").addClass("swiper-container");
-    $(".category-section .category-cont").addClass("swiper-wrapper");
-    $(".category-section .swiper-slidees").addClass("swiper-slide");
-    var category = new Swiper(".category-section .swiper-container", {
-      loop: true,
-      autoplay: true,
-      pagination: {
-        el: ".category-section .swiper-pagination",
-        clickable: true,
+  var category = new Swiper(".category-section .swiper-container", {
+    loop: true,
+    autoplay: true,
+    pagination: {
+      el: ".category-section .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".category-section .swiper-btn-next",
+      prevEl: ".category-section .swiper-btn-prev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-      breakpoints: {
-        0: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        767: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        992: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-        1199: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
+      767: {
+        slidesPerView: 2,
+        spaceBetween: 20,
       },
-    });
-  }
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1199: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    },
+  });
   ///////// **marks-section** /////////
   var screen = new Swiper(".marks-section .swiper-container", {
     loop: true,
@@ -385,6 +384,37 @@ $(document).ready(function () {
       },
     },
   });
+  ////////////////add swiper carsoul to class feature////////////////////////////////
+
+    $(".feature-section .features").addClass("swiper-container");
+    $(".feature-section .features-div").addClass("swiper-wrapper");
+    $(".feature-section .features-box").addClass("swiper-slide");
+    var feature = new Swiper(".feature-section .swiper-container", {
+      loop: true,
+      autoplay: true,
+      pagination: {
+        el: ".feature-section .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        767: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+        1199: {
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
   //////////** fixed arrow to top**//////////
   $(".arrow-top").click(function () {
     $("html,body").animate(
